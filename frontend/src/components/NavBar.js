@@ -1,13 +1,9 @@
 import React from "react";
-import "@/components/nav-bar.module.css";
-import { GoHome } from "react-icons/go";
-import { GrAnalytics } from "react-icons/gr";
-import { IoSettingsOutline } from "react-icons/io5";
-import { IoAddCircle } from "react-icons/io5";
-import { LuLeaf } from "react-icons/lu";
+import "components/nav-bar.css";
+
 import { useContext } from "react";
 import { useState } from "react";
-import { MyContext } from "../context/pages";
+import { MyContext } from "context/CurrentPageContext";
 
 function NavBar() {
     const { page, setPage } = useContext(MyContext);
@@ -16,58 +12,44 @@ function NavBar() {
 
     return (
         <nav id="navbar">
+            {/* Logo Section */}
+            <div className="logo">
+                <img src="/logo.png" alt="Logo" />{" "}
+                {/* Update src if you have a logo */}
+                <span>Lootpick</span>
+            </div>
+
+            {/* Search Section */}
+            <input
+                type="text"
+                placeholder="Search games..."
+                className="search"
+            />
+
+            {/* Button Section */}
             <button
                 onClick={() => {
-                    setPage("home");
+                    setPage("filter");
                     setKey((prev) => prev + 1);
-                    setActiveButton("home");
+                    setActiveButton("filter");
                 }}
-                className={`${activeButton === "home" ? "active" : ""} nav-button`}
+                className={`${
+                    activeButton === "filter" ? "active" : ""
+                } nav-button`}
             >
-                <GoHome
-                    size={24}
-                    style={{ strokeWidth: 0, stroke: "currentColor" }}
-                />
+                Filter
             </button>
 
             <button
                 onClick={() => {
-                    setPage("analytics");
-                    setActiveButton("analytics");
+                    setPage("recommend");
+                    setActiveButton("recommend");
                 }}
-                className={`${activeButton === "analytics" ? "active" : ""} nav-button`}
+                className={`${
+                    activeButton === "recommend" ? "active" : ""
+                } nav-button`}
             >
-                <GrAnalytics size={22} />
-            </button>
-
-            <button
-                onClick={() => {
-                    setPage("input");
-                    setActiveButton("input");
-                }}
-                className={`${activeButton === "input" ? "active" : ""} nav-button-input`}
-            >
-                <IoAddCircle size={50} />
-            </button>
-
-            <button
-                onClick={() => {
-                    setPage("reduce");
-                    setActiveButton("reduce");
-                }}
-                className={`${activeButton === "reduce" ? "active" : ""} nav-button`}
-            >
-                <LuLeaf size={24} />
-            </button>
-
-            <button
-                onClick={() => {
-                    setPage("settings");
-                    setActiveButton("settings");
-                }}
-                className={`${activeButton === "settings" ? "active" : ""} nav-button`}
-            >
-                <IoSettingsOutline size={24} />
+                Recommend
             </button>
         </nav>
     );

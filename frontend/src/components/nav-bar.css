@@ -1,0 +1,47 @@
+#navbar {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background: #222;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  justify-content: space-between;
+  z-index: 100;
+}
+
+#navbar .logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#navbar .logo img {
+  height: 40px;
+  width: 40px;
+}
+
+#navbar .search {
+  flex: 1;
+  margin: 0 20px;
+  padding: 8px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+}
+
+#navbar .nav-button button {
+  margin-left: 10px;
+  padding: 8px 16px;
+  background: #555;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+}
+
+#navbar .nav-button button:hover {
+  background: #777;
+}

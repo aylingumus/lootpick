@@ -1,25 +1,61 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useContext } from "react";
+import { MyProvider, MyContext } from "context/CurrentPageContext";
+
+import "./App.css";
+
+import NavBar from "components/NavBar";
+import FilterPage from "pages/Filter page/FilterPage";
+import RecommendPage from "pages/Recommend Page/RecommendPage";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const { page } = useContext(MyContext);
+    const { navBar } = useContext(MyContext);
+
+    const renderPage = () => {
+        switch (page) {
+            case "filter":
+                return <FilterPage />;
+            case "recommend":
+                return <RecommendPage />;
+            default:
+                return <FilterPage />;
+        }
+    };
+
+    const renderNavBar = () => {
+        switch (navBar) {
+            case true:
+                return <NavBar />;
+            case false:
+                return null;
+            default:
+                return <NavBar />;
+        }
+    };
+
+    return (
+        <>
+            <div className="app-wrapper">
+                <div className="phone-frame">
+                    <div className="phone-bezel">
+                        <div className="app-content">
+                            <div className="page-div">{renderPage()}</div>
+                        </div>
+                        {renderNavBar()}
+                    </div>
+                </div>
+            </div>
+        </>
+    );
 }
 
-export default App;
+function AppWrapper() {
+    // Wrap the entire app in the PageProvider to make context available
+    return (
+        <MyProvider>
+            <App />
+        </MyProvider>
+    );
+}
+
+export default AppWrapper;

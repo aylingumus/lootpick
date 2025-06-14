@@ -1,6 +1,6 @@
-import FooterBasic from "@/components/FooterBasic";
+import FooterBasic from "components/FooterBasic";
 
-import "@/pages/Recommend Page/styles/recomend-page.module.css";
+import "pages/Recommend Page/styles/recommend-page.module.css";
 
 function RecommendPage() {
   return (
