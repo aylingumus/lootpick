@@ -5,6 +5,8 @@ import { useContext } from "react";
 import { useState } from "react";
 import { MyContext } from "context/CurrentPageContext";
 
+import { LuGamepad2 } from "react-icons/lu";
+
 function NavBar() {
     const { page, setPage } = useContext(MyContext);
     const { key, setKey } = useContext(MyContext);
@@ -14,8 +16,7 @@ function NavBar() {
         <nav id="navbar">
             {/* Logo Section */}
             <div className="logo">
-                <img src="/logo.png" alt="Logo" />{" "}
-                {/* Update src if you have a logo */}
+                <LuGamepad2 size={30} />
                 <span>Lootpick</span>
             </div>
 
@@ -27,6 +28,7 @@ function NavBar() {
             />
 
             {/* Button Section */}
+            <div className="nav-buttons">
             <button
                 onClick={() => {
                     setPage("filter");
@@ -51,6 +53,7 @@ function NavBar() {
             >
                 Recommend
             </button>
+            </div>
         </nav>
     );
 }

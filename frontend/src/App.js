@@ -4,7 +4,7 @@ import { MyProvider, MyContext } from "context/CurrentPageContext";
 import "./App.css";
 
 import NavBar from "components/NavBar";
-import FilterPage from "pages/Filter page/FilterPage";
+import FilterPage from "pages/Filter Page/FilterPage";
 import RecommendPage from "pages/Recommend Page/RecommendPage";
 
 function App() {
@@ -38,10 +38,10 @@ function App() {
             <div className="app-wrapper">
                 <div className="phone-frame">
                     <div className="phone-bezel">
+                        {renderNavBar()}
                         <div className="app-content">
                             <div className="page-div">{renderPage()}</div>
                         </div>
-                        {renderNavBar()}
                     </div>
                 </div>
             </div>
