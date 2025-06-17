@@ -1,6 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
+
+import 'index.css';
+import 'styles/variables/color-variables.css'
+import 'styles/variables/padding-variables.css'
+import 'styles/variables/font-variables.css'
+import 'styles/variables/radius-variables.css'
+
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
