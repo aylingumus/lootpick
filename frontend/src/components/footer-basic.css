@@ -1,9 +1,9 @@
 .footer-basic-container {
-  background: #333;
+  background: var(--accent-dark);
   color: #fff;
   text-align: center;
-  padding: 20px;
-  margin-top: 40px;
+  padding: var(--padding-md);
+  margin-top: var(--padding);
   font-size: 0.9rem;
 }
 

@@ -1,50 +1,7 @@
 .filter-container {
-  border: 1px solid #555;
-  padding: 20px;
+  border: 1px solid var(--accent-dark);
+  padding: var(--padding-sm);
   max-width: 250px;
-  background: #1f1f1f;
-  border-radius: 8px;
-  color: #ffffff;
-}
-
-.filter-container .MuiTypography-root {
-  color: #ffffff;
-}
-
-.filter-container .MuiFormControlLabel-label {
-  color: #ffffff;
-}
-
-.filter-container .MuiTextField-root .MuiInputBase-input {
-  color: #ffffff;
-}
-
-.filter-container .MuiTextField-root .MuiOutlinedInput-root {
-  color: #ffffff;
-  border-color: #555;
-}
-
-.filter-container .MuiOutlinedInput-root fieldset {
-  border-color: #555;
-}
-
-.filter-container .MuiOutlinedInput-root:hover fieldset {
-  border-color: #888;
-}
-
-.filter-container .MuiSlider-root {
-  color: #888;
-}
-
-.filter-container .MuiCheckbox-root {
-  color: #888;
-}
-
-.filter-container .MuiButton-root {
-  color: #ffffff;
-  border: 1px solid #888;
-}
-
-.filter-container .MuiButton-root:hover {
-  border: 1px solid #fff;
+  background: var(--accent-light);
+  border-radius: var(--radius-md);
 }

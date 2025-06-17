@@ -4,7 +4,6 @@ import "pages/Filter Page/styles/filter-container.css";
 
 // Filter options
 const genres = ["Action", "RPG", "Strategy", "Simulator", "Adventure", "FPS", "Tactical"];
-
 const platforms = ["Windows", "macOS", "Linux"];
 
 export default function FilterContainer() {
@@ -42,7 +41,7 @@ export default function FilterContainer() {
   };
 
   return (
-    <Box p={2} className="filter-container">
+    <Box className="filter-container">
       <Typography variant="h5" mb={2}>
         Filters
       </Typography>
