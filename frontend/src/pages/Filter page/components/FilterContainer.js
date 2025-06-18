@@ -61,7 +61,7 @@ export default function FilterContainer() {
 
     return (
         <Box className="filter-container">
-            <Typography variant="h5" mb={2}>
+            <Typography variant="h6" mb={1}>
                 Filters
             </Typography>
 
@@ -80,12 +80,8 @@ export default function FilterContainer() {
             <Typography variant="subtitle1" mt={2}>
                 Genre
             </Typography>
-<div className="flex flex-row justify-between items-center mb-4">
-  <div className="font-bold uppercase">Item 1</div>
-  <div>Item 2</div>
-  <div>Item 3</div>
-</div>
-            <div classname="flex flex-col">
+
+            <div classname="flex flex-row justify-between items-center mb-4">
                 {genres.map((genre) => (
                     <FormControlLabel
                         key={genre}

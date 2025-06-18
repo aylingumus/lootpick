@@ -30,6 +30,8 @@
   background: var(--accent-light);
   padding: var(--spacing-md);
   border-radius: var(--radius-md);
+  display: flex;
+  flex: 1; /*This will make it fill the container */
 }
 
 .filter__results-header {

@@ -16,8 +16,8 @@ function NavBar() {
         <nav id="navbar">
             {/* Logo Section */}
             <div className="logo">
-                <LuGamepad2 size={30} />
-                <span>Lootpick</span>
+                <LuGamepad2 size={38} />
+                <span className="text-2xl font-bold">Lootpick</span>
             </div>
 
             {/* Search Section */}

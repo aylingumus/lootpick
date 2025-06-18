@@ -24,8 +24,9 @@ function FilterPage() {
                     </div>
                 </div>
 
-                <FooterBasic />
+                
             </div>
+            <FooterBasic />
         </>
     );
 }
