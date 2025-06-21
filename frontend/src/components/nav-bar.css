@@ -1,46 +1,58 @@
-#navbar {
-  position: sticky;
-  top: 0;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+.navbar {
+  background-color: var(--accent-dark);
+  padding: var(--spacing-xss) var(--spacing-xl);
   z-index: 100;
-  padding: var(--spacing-sm) var(--spacing-xl);
-  background: var(--accent-dark);
+   position: relative;
+   height: 4.5em;
+   display: flex;
+   justify-content: center;
 }
 
-#navbar .logo {
+.navbar__toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar__logo {
   display: flex;
   align-items: center;
-  justify-content: center;
   gap: var(--spacing-xs);
 }
 
-#navbar .search {
-  width: 30%;
-  padding: var(--spacing-xs);
+.navbar__title {
+  font-weight: bold;
+  color: white;
+}
+
+.navbar__search {
+  width: 35%;
+  background-color: white;
   border-radius: var(--radius-sm);
-  border: none;
-  outline: none;
-  color: black
+  
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 35%; 
+  z-index: 10;
 }
-.nav-buttons {
+
+.navbar__buttons {
   display: flex;
-  align-items: center;
   gap: var(--spacing-xs);
 }
 
-#navbar .nav-buttons button {
-  margin-left: 10px;
-  padding: var(--spacing-xs) var(--spacing-sm);
+.navbar__button {
   color: #fff;
-  border-radius: var(--radius-sm);
-  cursor: pointer;
-  transition: background 0.2s ease-in-out;
+  padding: var(--spacing-xs) var(--spacing-md);
+  border-radius: var(--radius-md);
+  text-transform: none;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 }
 
-#navbar .nav-buttons button:hover {
-  background: var(--accent-regular);
-  color: var(--accent-dark);
+
+.navbar__button:hover,
+.navbar__button.active {
+  background-color: var(--accent-darkish);
+  color: var(--white);
 }

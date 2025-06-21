@@ -1,61 +1,92 @@
-import React from "react";
-import "components/nav-bar.css";
-
-import { useContext } from "react";
-import { useState } from "react";
+import React, { useContext } from "react";
 import { MyContext } from "context/CurrentPageContext";
-
 import { LuGamepad2 } from "react-icons/lu";
 
+import {
+  AppBar,
+  Toolbar,
+  Box,
+  Typography,
+  TextField,
+  Button,
+} from "@mui/material";
+
+import "components/nav-bar.css";
+
 function NavBar() {
-    const { page, setPage } = useContext(MyContext);
-    const { key, setKey } = useContext(MyContext);
-    const { activeButton, setActiveButton } = useContext(MyContext);
+  const { page, setPage } = useContext(MyContext);
+  const { key, setKey } = useContext(MyContext);
+  const { activeButton, setActiveButton } = useContext(MyContext);
 
-    return (
-        <nav id="navbar">
-            {/* Logo Section */}
-            <div className="logo">
-                <LuGamepad2 size={38} />
-                <span className="text-2xl font-bold">Lootpick</span>
-            </div>
+  return (
+    <AppBar position="sticky" className="navbar">
+        
+      <Toolbar className="navbar__toolbar">
 
-            {/* Search Section */}
-            <input
-                type="text"
-                placeholder="Search games..."
-                className="search"
-            />
+        <Box className="navbar__logo">
+          <LuGamepad2 size={38} />
+          <Typography variant="h5" className="navbar__title">
+            Lootpick
+          </Typography>
+        </Box>
 
-            {/* Button Section */}
-            <div className="nav-buttons">
-            <button
-                onClick={() => {
-                    setPage("filter");
-                    setKey((prev) => prev + 1);
-                    setActiveButton("filter");
-                }}
-                className={`${
-                    activeButton === "filter" ? "active" : ""
-                } nav-button`}
-            >
-                Filter
-            </button>
+        <TextField
+          placeholder="Search games..."
+          variant="outlined"
+          size="small"
+          className="navbar__search"
+        />
 
-            <button
-                onClick={() => {
-                    setPage("recommend");
-                    setActiveButton("recommend");
-                }}
-                className={`${
-                    activeButton === "recommend" ? "active" : ""
-                } nav-button`}
-            >
-                Recommend
-            </button>
-            </div>
-        </nav>
-    );
+        <Box className="navbar__buttons">
+          <Button
+            variant="standard"
+            className={`navbar__button ${activeButton === "filter" ? "active" : ""}`}
+            onClick={() => {
+              setPage("filter");
+              setKey((prev) => prev + 1);
+              setActiveButton("filter");
+            }}
+          >
+            Filter
+          </Button>
+
+          <Button
+            variant="standard"
+            className={`navbar__button ${activeButton === "recommend" ? "active" : ""}`}
+            onClick={() => {
+              setPage("recommend");
+              setActiveButton("recommend");
+            }}
+          >
+            Recommend
+          </Button>
+
+          <Button
+            variant="standard"
+            className={`navbar__button ${activeButton === "compare" ? "active" : ""}`}
+            onClick={() => {
+              setPage("compare");
+              setActiveButton("compare");
+            }}
+          >
+            Compare
+          </Button>
+
+            <Button
+            variant="standard"
+            className={`navbar__button ${activeButton === "wishlist" ? "active" : ""}`}
+            onClick={() => {
+              setPage("wishlist");
+              setActiveButton("wishlist");
+            }}
+          >
+            Wishlist
+          </Button>
+
+        </Box>
+      </Toolbar>
+    </AppBar>
+  );
 }
 
 export default NavBar;

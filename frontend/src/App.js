@@ -6,6 +6,8 @@ import "./App.css";
 import NavBar from "components/NavBar";
 import FilterPage from "pages/Filter Page/FilterPage";
 import RecommendPage from "pages/Recommend Page/RecommendPage";
+import ComparePage from "pages/Compare Page/ComparePage";
+import WishlistPage from "pages/Wishlist Page/WishlistPage";
 
 function App() {
     const { page } = useContext(MyContext);
@@ -17,6 +19,10 @@ function App() {
                 return <FilterPage />;
             case "recommend":
                 return <RecommendPage />;
+                        case "compare":
+                return <ComparePage />;
+                                        case "wishlist":
+                return <WishlistPage />;
             default:
                 return <FilterPage />;
         }

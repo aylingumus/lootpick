@@ -1,0 +1,4 @@
+:root {
+    --card-shadow: 0 0 0.75em rgba(0, 0, 0, 0.1);
+    --container-shadow: 0 0 2em rgba(0, 0, 0, 0.3);
+}

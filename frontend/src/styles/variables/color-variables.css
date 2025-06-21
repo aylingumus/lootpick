@@ -1,10 +1,10 @@
 :root {
     --accent-light: rgb(255, 255, 255);
+    --accent-lightish: rgb(240, 244, 255);
     --accent-regular: rgb(226, 233, 255);
+    --accent-darkish: rgb(158, 162, 224);
     --accent-dark: rgb(90, 90, 193);
 
-    
-    
     --light-primary-color: rgb(123, 188, 160);
     --primary-color: rgb(83, 133, 119);
     --darkish-primary-color: rgb(64, 119, 96);
@@ -22,6 +22,14 @@
     --normal-green: rgb(83, 133, 119);
     --light-green: rgb(123, 188, 160);
     --lightest-green: rgb(148, 210, 184);
-    --lightest-green2: rgb(191,227, 210);
+    --lightest-green2: rgb(191, 227, 210);
     --lightest-green3: rgb(240, 255, 248);
+
+    --white: white;
+    --lightest-gray: #f8f9fc;
+    --light-gray: #f1f2f6;
+    --normal-gray2: #dde5f3;
+    --dark-gray: #4a4a4a;
+    --normal-gray: #a4adbc;
+    --darkish-gray: #5a5a5a;
 }

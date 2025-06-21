@@ -1,0 +1,12 @@
+.recommend {
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 4.5em);
+}
+
+.recommend__container {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: center;
+}
