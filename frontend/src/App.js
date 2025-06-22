@@ -1,6 +1,9 @@
 import React, { useState, useContext } from "react";
 import { MyProvider, MyContext } from "context/CurrentPageContext";
 
+import { ThemeProvider } from "@mui/material/styles";
+import theme from "styles/variables/theme";
+
 import "./App.css";
 
 import NavBar from "components/NavBar";
@@ -19,9 +22,9 @@ function App() {
                 return <FilterPage />;
             case "recommend":
                 return <RecommendPage />;
-                        case "compare":
+            case "compare":
                 return <ComparePage />;
-                                        case "wishlist":
+            case "wishlist":
                 return <WishlistPage />;
             default:
                 return <FilterPage />;
@@ -59,7 +62,9 @@ function AppWrapper() {
     // Wrap the entire app in the PageProvider to make context available
     return (
         <MyProvider>
-            <App />
+            <ThemeProvider theme={theme}>
+                <App />
+            </ThemeProvider>
         </MyProvider>
     );
 }

@@ -1,11 +1,12 @@
 import "components/footer-basic.css";
+import { Box, Typography } from "@mui/material";
 
 function FooterBasic() {
     return (
-        <footer className="footer-basic-container">
-            <p>© 2025 Lootpick App</p>
-            <p>Built with React</p>
-        </footer>
+        <Box component="footer" className="footer">
+            <Typography variant="body2">© 2025 Lootpick App</Typography>
+            <Typography variant="body2">Built with React</Typography>
+        </Box>
     );
 }
 

@@ -1,10 +1,10 @@
-.footer-basic-container {
+.footer {
   background: var(--accent-dark);
   color: #fff;
   text-align: center;
   padding: var(--spacing-md);
 }
 
-.footer-basic-container p {
+.footer p {
   margin: var(--spacing-xs);
 }

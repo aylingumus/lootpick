@@ -23,7 +23,9 @@ const genres = [
 const platforms = ["Windows", "macOS", "Linux"];
 
 export default function FilterContainer() {
+    
     const [searchTag, setSearchTag] = useState("");
+
     const [selectedGenres, setSelectedGenres] = useState([]);
 
     const [priceRange, setPriceRange] = useState([0, 100]);
@@ -31,6 +33,7 @@ export default function FilterContainer() {
 
     const [selectedPlatforms, setSelectedPlatforms] = useState([]);
 
+    
     // Handle multiselect
     const handleGenreChange = (genre) => {
         setSelectedGenres((prev) =>
@@ -61,7 +64,7 @@ export default function FilterContainer() {
 
     return (
         <Box className="filter-container">
-            <Typography variant="h6" mb={1}>
+            <Typography variant="h6" >
                 Filters
             </Typography>
 
@@ -76,12 +79,13 @@ export default function FilterContainer() {
                 onChange={(e) => setSearchTag(e.target.value)}
             />
 
+
             {/* Genres */}
-            <Typography variant="subtitle1" mt={2}>
+            <Typography variant="subtitle1" sx={{ fontWeight: 'bold' }}>
                 Genre
             </Typography>
 
-            <div classname="flex flex-row justify-between items-center mb-4">
+            <Box className="filter__genres" sx={{ fontWeight: 'bold' }}>
                 {genres.map((genre) => (
                     <FormControlLabel
                         key={genre}
@@ -94,10 +98,10 @@ export default function FilterContainer() {
                         label={genre}
                     />
                 ))}
-            </div>
+            </Box>
 
             {/* Price range */}
-            <Typography variant="subtitle1" mt={2}>
+            <Typography variant="subtitle1" sx={{ fontWeight: 'bold' }}>
                 Price range
             </Typography>
             <Slider
@@ -109,7 +113,7 @@ export default function FilterContainer() {
             />
 
             {/* Rating range */}
-            <Typography variant="subtitle1" mt={2}>
+            <Typography variant="subtitle1" sx={{ fontWeight: 'bold' }}>
                 Rating (min to max)
             </Typography>
             <Slider
@@ -122,9 +126,11 @@ export default function FilterContainer() {
             />
 
             {/* Platform */}
-            <Typography variant="subtitle1" mt={2}>
+            <Typography variant="subtitle1" sx={{ fontWeight: 'bold' }}>
                 Platform
             </Typography>
+
+            <Box className="filter__platform">
             {platforms.map((platform) => (
                 <FormControlLabel
                     key={platform}
@@ -137,6 +143,7 @@ export default function FilterContainer() {
                     label={platform}
                 />
             ))}
+            </Box>
 
             {/* Clear button */}
             <Button
@@ -144,7 +151,7 @@ export default function FilterContainer() {
                 color="secondary"
                 onClick={clearFilters}
                 fullWidth
-                sx={{ mt: 2 }}
+                
             >
                 Clear Filters
             </Button>

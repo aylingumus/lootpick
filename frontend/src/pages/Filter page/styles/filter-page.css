@@ -1,37 +1,59 @@
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
 .filter {
-    padding: var(--spacing-sm);
-    background: var(--accent-regular);
+    padding: var(--spacing-md);
     min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
+
+    background: linear-gradient(-45deg, #f7ccb4, #f0a6d1, #a3d8f4, #b3e7d8);
+    background-size: 400% 400%;
+    animation: gradient 45s ease infinite;
+}
+
+#display-info {
+    width: 400px;
+    height: auto;
+    padding: 20px;
+    border-radius: 20px;
+    box-sizing: border-box;
+    overflow: auto;
+    background-color: rgba(240, 248, 255, 0.5);
+    border: 1px solid rgba(204, 204, 204, 0.75);
 }
 
 .filter__container {
     min-width: 1200px;
     max-width: 1500px;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
 }
 
 .filter__header {
     font-weight: bold;
     text-align: center;
-    font-size: var(--font-size-md);
     margin-bottom: var(--spacing-sm);
     background: var(--accent-light);
     padding: var(--spacing-sm);
-    border-radius: var(--radius-md);
+    border-radius: var(--radius-lg);
 }
 
 .filter__body {
     display: flex;
     gap: var(--spacing-md);
-    flex: 1; /*This will make it fill the container */
-}
-
-.filter__side-panel {
-    background: var(--accent-light);
-    padding: var(--spacing-sm);
-    border-radius: var(--radius-md);
+    align-items: flex-start;
 }
 
 .filter__results {
@@ -42,19 +64,36 @@
     flex: 1; /*This will make it fill the container */
     flex-direction: column;
     gap: var(--spacing-md);
+    align-items: center;
 }
 
 .filter__results-header {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+
+    width: 100%;
+}
+
+.filter__sorting {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
     align-items: center;
-    margin-bottom: var(--spacing-md);
-    padding-bottom: var(--spacing-sm);
-    border-bottom: 1px solid var(--accent-dark);
+    gap: var(--spacing-sm);
+}
+
+.filter__sorting-dropdown {
+    width: 200px;
+    margin-left: var(--spacing-sm);
 }
 
 .filter__compare {
-    font-size: var(--font-size-sm);
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: var(--spacing-sm);
+    justify-content: flex-end;
+    align-items: center;
 }
 
 .filter__grid {
@@ -64,6 +103,11 @@
     gap: var(--spacing-sm);
     flex-wrap: wrap;
     align-content: start;
+}
+
+.filter__load-button {
+    align-self: flex-; /* Prevents auto-stretch in column layout */
+    width: auto; /* Only as wide as content */
 }
 
 filter footer,
