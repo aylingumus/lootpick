@@ -9,6 +9,7 @@ import IconButton from "@mui/material/IconButton";
 import { IoGitCompare } from "react-icons/io5";
 import { FaRegHeart } from "react-icons/fa";
 import { FaHeart } from "react-icons/fa";
+import { FaStar } from "react-icons/fa";
 
 export default function GameCard({
     image,
@@ -34,18 +35,14 @@ export default function GameCard({
                 </button>
             </Box>
             <Box className="gamecard__text">
-                <Box className="gamecard__info">
-                    <Typography
-                        variant="h6"
-                        className="gamecard__title"
-                        sx={{ lineHeight: "1.4rem", minHeight: "2.8rem" }}
-                    >
-                        {title}
-                    </Typography>
-                    <Typography variant="body1" className="gamecard__rating">
-                        {rating}
-                    </Typography>
-                </Box>
+                <Typography
+                    variant="h6"
+                    className="gamecard__title"
+                    sx={{ fontSize: "var(--font-size-xl)" }}
+                >
+                    {title}
+                </Typography>
+
                 {/* <Typography variant="subtitle2" className="gamecard__date">
                     {releaseDate}
                 </Typography> */}
@@ -53,21 +50,40 @@ export default function GameCard({
                     variant="body2"
                     className="gamecard__description"
                     sx={{
-                        fontSize: "0.9rem",
-                        lineHeight: "1.1rem",
-                        minHeight: "3.3rem",
+                        fontSize: "0.95rem",
+                        lineHeight: "1.3rem",
+                        minHeight: "2.6rem",
                     }}
                 >
                     {description}
                 </Typography>
 
-                <Typography
-                    sx={{ width: "fit-content" }}
-                    variant="body1"
-                    className="gamecard__price"
-                >
-                    {price}
-                </Typography>
+                <Box className="gamecard__info">
+                    <Typography
+                        sx={{
+                            width: "fit-content",
+                            fontSize: "var(--font-size-md)",
+                        }}
+                        variant="body1"
+                        className="gamecard__price"
+                    >
+                        {price}
+                    </Typography>
+
+                    <Typography
+                        variant="body1"
+                        className="gamecard__rating"
+                        sx={{
+                            whiteSpace: "nowrap",
+                            display: "flex",
+                            alignItems: "center",
+                            gap: "5px",
+                            fontSize: "var(--font-size-md)",
+                        }}
+                    >
+                        <FaStar /> {rating}%
+                    </Typography>
+                </Box>
             </Box>
         </Box>
     );

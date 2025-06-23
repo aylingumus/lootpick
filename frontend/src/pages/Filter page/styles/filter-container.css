@@ -1,8 +1,14 @@
 .filter-container {
   padding: var(--spacing-lg);
-  min-width: 250px;
+  min-width: 350px;
   max-width: 450px;
-  background: var(--accent-light);
+  background: linear-gradient(135deg, rgb(9, 18, 41), rgb(22, 19, 71));
+/* 
+    box-shadow: inset 1px 1px 0.12px rgba(255, 255, 255, 0.2),
+        2px 2px 3px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.15); */
+border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: var(--container-shadow);
   border-radius: var(--radius-lg);
   display: flex;
   flex-direction: column;

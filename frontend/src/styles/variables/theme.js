@@ -22,8 +22,8 @@ const theme = createTheme({
         h1: { fontSize: "2rem" }, // override as needed
         h2: { fontSize: "1.75rem" },
         h3: { fontSize: "1.5rem" },
-        body1: { fontSize: "0.9rem" },
-        body2: { fontSize: "0.8rem" },
+        body1: { fontSize: "0.8rem" },
+        body2: { fontSize: "0.7rem" },
     },
 
     spacing: 4,

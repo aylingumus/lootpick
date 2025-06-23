@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import FooterBasic from "components/FooterBasic";
 import FilterContainer from "pages/Filter Page/components/FilterContainer";
 import GameCard from "pages/Filter Page/components/GameCard";
+import FilterHeader from "pages/Filter Page/components/FilterHeader";
 import {
     Button,
     Box,
@@ -19,7 +20,7 @@ function FilterPage() {
         {
             image: "https://cdn.mos.cms.futurecdn.net/Usdru3W58p6g8NGpxzUfyi-1200-80.jpg",
             title: "Grand Theft Auto 5",
-            rating: 4.9,
+            rating: "89%",
             releaseDate: "Mar 1, 2023",
             description:
                 "Open-world crime saga with a deep story and vast freedom.",
@@ -35,7 +36,7 @@ function FilterPage() {
         },
         {
             image: "https://images.ctfassets.net/wn7ipiv9ue5v/478DkKMV6s8264JSaZlZcN/85f9527f4af4b0930052ae5c371e776e/RGL_RDR2_UltimateEdition_1310x738_R02.jpg",
-            title: "Red Dead Redemption 2: The Ultimate Western Experience",
+            title: "Red Dead Redemption 2",
             rating: 4.9,
             releaseDate: "Oct 26, 2018",
             description:
@@ -44,7 +45,7 @@ function FilterPage() {
         },
         {
             image: "https://gaming-cdn.com/images/products/2616/orig/the-legend-of-zelda-breath-of-the-wild-switch-spel-nintendo-eshop-europe-cover.jpg?v=1730381682",
-            title: "The Legend of Zelda: Breath of the Wild",
+            title: "The Legend of Zelda",
             rating: 4.9,
             releaseDate: "Mar 3, 2017",
             description:
@@ -66,7 +67,7 @@ function FilterPage() {
             rating: 4.1,
             releaseDate: "Dec 10, 2020",
             description:
-                "Futuristic RPG set in a sprawling neon city with a long and winding storyline to test text overflow and layout stability.",
+                "Futuristic RPG set in a sprawling neon city with a long and winding storyline.",
             price: "€39.99",
         },
         {
@@ -203,10 +204,8 @@ function FilterPage() {
         <>
             <div className="filter">
                 <div className="filter__container">
-                    <Typography variant="h4" className="filter__header">
-                        This is Filter Page header
-                    </Typography>
-
+                    <FilterHeader />
+                    
                     <div className="filter__body">
                         <FilterContainer className="filter__side-panel" />
 
@@ -220,7 +219,7 @@ function FilterPage() {
                                         Sort by:
                                     </Typography>
 
-                                    <FormControl className="filter__sorting-dropdown" >
+                                    <FormControl className="filter__sorting-dropdown">
                                         <InputLabel id="dropdown-label">
                                             Select Option
                                         </InputLabel>
@@ -262,7 +261,7 @@ function FilterPage() {
                                     </FormControl>
                                 </Box>
 
-                                <Box className="filter__compare">
+                                {/* <Box className="filter__compare">
                                     <Typography
                                         className="filter__compare-text"
                                         variant="subtitle1"
@@ -275,7 +274,7 @@ function FilterPage() {
                                     >
                                         Compare
                                     </Button>
-                                </Box>
+                                </Box> */}
                             </Box>
 
                             <div className="filter__grid">
