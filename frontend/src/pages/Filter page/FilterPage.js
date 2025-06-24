@@ -1,17 +1,12 @@
 import React, { useState } from "react";
+import { Button, Box } from "@mui/material";
+import Typography from "@mui/material/Typography";
+
 import FooterBasic from "components/FooterBasic";
 import FilterContainer from "pages/Filter Page/components/FilterContainer";
 import GameCard from "pages/Filter Page/components/GameCard";
 import FilterHeader from "pages/Filter Page/components/FilterHeader";
-import {
-    Button,
-    Box,
-    FormControl,
-    InputLabel,
-    Select,
-    MenuItem,
-} from "@mui/material";
-import Typography from "@mui/material/Typography";
+import SortingDropdown from "pages/Filter Page/components/SortingDropdown";
 
 import "pages/Filter Page/styles/filter-page.css";
 
@@ -20,7 +15,7 @@ function FilterPage() {
         {
             image: "https://cdn.mos.cms.futurecdn.net/Usdru3W58p6g8NGpxzUfyi-1200-80.jpg",
             title: "Grand Theft Auto 5",
-            rating: "89%",
+            rating: 85,
             releaseDate: "Mar 1, 2023",
             description:
                 "Open-world crime saga with a deep story and vast freedom.",
@@ -29,7 +24,7 @@ function FilterPage() {
         {
             image: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/292030/96b8627588997030e5a6b56ca5e9944756c8f288/capsule_616x353.jpg?t=1749199563",
             title: "The Witcher 3",
-            rating: 4.8,
+            rating: 80,
             releaseDate: "May 19, 2015",
             description: "Fantasy RPG.",
             price: "€19.99",
@@ -37,7 +32,7 @@ function FilterPage() {
         {
             image: "https://images.ctfassets.net/wn7ipiv9ue5v/478DkKMV6s8264JSaZlZcN/85f9527f4af4b0930052ae5c371e776e/RGL_RDR2_UltimateEdition_1310x738_R02.jpg",
             title: "Red Dead Redemption 2",
-            rating: 4.9,
+            rating: 90,
             releaseDate: "Oct 26, 2018",
             description:
                 "Epic Western adventure with cinematic realism and depth.",
@@ -46,7 +41,7 @@ function FilterPage() {
         {
             image: "https://gaming-cdn.com/images/products/2616/orig/the-legend-of-zelda-breath-of-the-wild-switch-spel-nintendo-eshop-europe-cover.jpg?v=1730381682",
             title: "The Legend of Zelda",
-            rating: 4.9,
+            rating: 93,
             releaseDate: "Mar 3, 2017",
             description:
                 "Revolutionary open-world design with exploration and discovery.",
@@ -55,7 +50,7 @@ function FilterPage() {
         {
             image: "https://fanatical.imgix.net/product/original/f7729888-af11-42c2-bdf4-423bdd310204.jpeg?auto=compress,format&w=870&fit=crop&h=489",
             title: "God of War Ragnarök",
-            rating: 4.7,
+            rating: 94,
             releaseDate: "Nov 9, 2022",
             description:
                 "Mythological action-adventure with a strong emotional narrative.",
@@ -64,7 +59,7 @@ function FilterPage() {
         {
             image: "https://www.budgetgaming.nl/plaatjes/reviews/Cyberpunk%202077%20Ultimate%20Edition/CP2077UES2_Logo.jpg",
             title: "Cyberpunk 2077",
-            rating: 4.1,
+            rating: 90,
             releaseDate: "Dec 10, 2020",
             description:
                 "Futuristic RPG set in a sprawling neon city with a long and winding storyline.",
@@ -73,7 +68,7 @@ function FilterPage() {
         {
             image: "https://www.nixxes.com/wp-content/uploads/2024/03/featured-img-hfw.jpg",
             title: "Horizon Forbidden West",
-            rating: 4.5,
+            rating: 92,
             releaseDate: "Feb 18, 2022",
             description:
                 "Post-apocalyptic open-world game with mechanical beasts.",
@@ -82,7 +77,7 @@ function FilterPage() {
         {
             image: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1245620/capsule_616x353.jpg?t=1748630546",
             title: "Elden Ring",
-            rating: 4.9,
+            rating: 77,
             releaseDate: "Feb 25, 2022",
             description:
                 "Dark fantasy RPG with open-world exploration and challenge.",
@@ -91,7 +86,7 @@ function FilterPage() {
         {
             image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrWO9hEIU1FNN9yI5OgXfh1m1CCtNRl_aK6A&s",
             title: "Spider-Man: Miles Morales",
-            rating: 4.6,
+            rating: 86,
             releaseDate: "Nov 12, 2020",
             description: "Superhero action with smooth web-swinging mechanics.",
             price: "€39.99",
@@ -99,7 +94,7 @@ function FilterPage() {
         {
             image: "https://gaming-cdn.com/images/products/6147/orig/assassin-s-creed-valhalla-pc-spel-ubisoft-connect-europe-cover.jpg?v=1709130520",
             title: "Assassin’s Creed Valhalla",
-            rating: 4.3,
+            rating: 95,
             releaseDate: "Nov 10, 2020",
             description:
                 "Viking-era action RPG with large open-world regions and immersive lore.",
@@ -108,25 +103,16 @@ function FilterPage() {
         {
             image: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1196590/capsule_616x353.jpg?t=1741142800",
             title: "Resident Evil Village",
-            rating: 4.4,
+            rating: 99,
             releaseDate: "May 7, 2021",
             description:
                 "Survival horror with intense atmosphere and storytelling.",
             price: "€34.99",
         },
         {
-            image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0YsbFwuvEXxti-0bd7amQRk9xYYs4BFwfmw&s",
-            title: "Call of Duty: Modern Warfare II",
-            rating: 4.2,
-            releaseDate: "Oct 28, 2022",
-            description:
-                "Tactical shooter with modern graphics and multiplayer modes.",
-            price: "€69.99",
-        },
-        {
             image: "https://image.api.playstation.com/vulcan/ap/rnd/202407/1020/91fe046f742042e3b31e57f7731dbe2226e1fd1e02a36223.jpg",
             title: "Minecraft",
-            rating: 4.8,
+            rating: 79,
             releaseDate: "Nov 18, 2011",
             description: "Block-based sandbox building and survival adventure.",
             price: "€26.95",
@@ -134,7 +120,7 @@ function FilterPage() {
         {
             image: "https://i.guim.co.uk/img/media/01512e0bd1d78a9a85026844386c02c544c01084/38_0_1200_720/master/1200.jpg?width=1200&quality=85&auto=format&fit=max&s=cef05f7f90efd180648f5aa5ce0d3690",
             title: "Fortnite",
-            rating: 4.0,
+            rating: 88,
             releaseDate: "Jul 25, 2017",
             description:
                 "Battle royale with unique building mechanics and constant updates.",
@@ -143,7 +129,7 @@ function FilterPage() {
         {
             image: "https://blz-contentstack-images.akamaized.net/v3/assets/bltf408a0557f4e4998/bltec310a912eb6ceb1/67ffe15675d9ef1e30e1c799/Browsing_Card-and-Asset_Gallery_1.png",
             title: "Overwatch 2",
-            rating: 4.1,
+            rating: 84,
             releaseDate: "Oct 4, 2022",
             description: "Team-based shooter with a diverse roster of heroes.",
             price: "Free",
@@ -151,7 +137,7 @@ function FilterPage() {
         {
             image: "https://britishesports.org/wp-content/uploads/fly-images/11474/ts-apex-legends-free-to-play-battle-royale_0-767x710.jpg",
             title: "Apex Legends",
-            rating: 4.4,
+            rating: 91,
             releaseDate: "Feb 4, 2019",
             description: "Fast-paced battle royale with hero-based mechanics.",
             price: "Free",
@@ -159,7 +145,7 @@ function FilterPage() {
         {
             image: "https://gaming-cdn.com/images/products/1767/orig/stardew-valley-pc-mac-spel-steam-cover.jpg?v=1704800467",
             title: "Stardew Valley",
-            rating: 4.9,
+            rating: 93,
             releaseDate: "Feb 26, 2016",
             description:
                 "Charming farming sim with deep character interactions and a relaxing pace.",
@@ -168,7 +154,7 @@ function FilterPage() {
         {
             image: "https://www.nintendo.com/eu/media/images/10_share_images/games_15/nintendo_switch_download_software_1/H2x1_NSwitchDS_AmongUs_image1600w.jpg",
             title: "Among Us",
-            rating: 4.2,
+            rating: 94,
             releaseDate: "Jun 15, 2018",
             description:
                 "Social deduction game set in a sci-fi universe with simple, addictive gameplay.",
@@ -177,7 +163,7 @@ function FilterPage() {
         {
             image: "https://cdn1.epicgames.com/offer/24b9b5e323bc40eea252a10cdd3b2f10/EGS_LeagueofLegends_RiotGames_S1_2560x1440-80471666c140f790f28dff68d72c384b",
             title: "League of Legends",
-            rating: 4.0,
+            rating: 87,
             releaseDate: "Oct 27, 2009",
             description:
                 "Competitive MOBA with deep strategy and high skill ceiling.",
@@ -186,7 +172,7 @@ function FilterPage() {
         {
             image: "https://assets.xboxservices.com/assets/4e/bc/4ebcb533-e184-42f3-833b-9aa47a81f39e.jpg?n=153142244433_Poster-Image-1084_1920x720.jpg",
             title: "Valorant",
-            rating: 4.3,
+            rating: 89,
             releaseDate: "Jun 2, 2020",
             description:
                 "Tactical FPS combining precise gunplay with unique agents.",
@@ -194,18 +180,12 @@ function FilterPage() {
         },
     ];
 
-    const [value, setValue] = useState("");
-
-    const handleChange = (event) => {
-        setValue(event.target.value);
-    };
-
     return (
         <>
             <div className="filter">
                 <div className="filter__container">
                     <FilterHeader />
-                    
+
                     <div className="filter__body">
                         <FilterContainer className="filter__side-panel" />
 
@@ -215,50 +195,11 @@ function FilterPage() {
                                     <Typography
                                         className=""
                                         variant="subtitle1"
+                                        sx={{ fontSize: "1rem" }}
                                     >
                                         Sort by:
                                     </Typography>
-
-                                    <FormControl className="filter__sorting-dropdown">
-                                        <InputLabel id="dropdown-label">
-                                            Select Option
-                                        </InputLabel>
-                                        <Select
-                                            labelId="dropdown-label"
-                                            id="dropdown"
-                                            value={value}
-                                            label="Select Option"
-                                            onChange={handleChange}
-                                        >
-                                            <MenuItem value="name-asc">
-                                                Name (A–Z)
-                                            </MenuItem>
-                                            <MenuItem value="name-desc">
-                                                Name (Z–A)
-                                            </MenuItem>
-                                            <MenuItem value="price-asc">
-                                                Price (Low to High)
-                                            </MenuItem>
-                                            <MenuItem value="price-desc">
-                                                Price (High to Low)
-                                            </MenuItem>
-                                            <MenuItem value="release-desc">
-                                                Release Date (Newest)
-                                            </MenuItem>
-                                            <MenuItem value="release-asc">
-                                                Release Date (Oldest)
-                                            </MenuItem>
-                                            <MenuItem value="rating-desc">
-                                                Rating (High to Low)
-                                            </MenuItem>
-                                            <MenuItem value="popular">
-                                                Most Popular
-                                            </MenuItem>
-                                            <MenuItem value="discount">
-                                                Biggest Discount
-                                            </MenuItem>
-                                        </Select>
-                                    </FormControl>
+                                    <SortingDropdown />
                                 </Box>
 
                                 {/* <Box className="filter__compare">
@@ -294,6 +235,16 @@ function FilterPage() {
                             <Button
                                 variant="contained"
                                 className="filter__load-button"
+                                sx={{
+                                    fontSize: "1rem",
+                                    backgroundColor: "var(--orange)", // orange fill
+
+                                    borderColor: "var(--orange)", // optional: make border match
+                                    "&:hover": {
+                                        backgroundColor: "var(--orange-dark)", // darker orange on hover
+                                        borderColor: "var(--orange-dark)",
+                                    },
+                                }}
                             >
                                 Load More
                             </Button>

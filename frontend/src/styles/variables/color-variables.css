@@ -32,4 +32,32 @@
     --dark-gray: #4a4a4a;
     --normal-gray: #a4adbc;
     --darkish-gray: #5a5a5a;
+
+    /* MAIN COLORS */
+    --darkest: rgb(9, 18, 41);
+    --dark: rgb(22, 19, 71);
+    --darkish: rgb(44, 38, 110);
+    --normal: rgb(74, 70, 149);
+    --normalish: rgb(85, 37, 130);
+    --lightish: rgb(116, 115, 184);
+    --light: rgb(168, 169, 215);
+    --lightest: rgb(220, 222, 245);
+
+    /* ACCENTS */
+    --orange: rgb(191, 86, 45);
+    --orange-dark: rgb(161, 72, 38);
+    --purple: rgba(166, 89, 230, 0.5);
+
+    /* GRADIENTS */
+    --gradient-background: linear-gradient(135deg, var(--dark), var(--darkish));
+    --gradient-containers: linear-gradient(135deg, var(--darkest), var(--darkish));
+    --gradient-gamecard: linear-gradient(135deg, var(--dark), var(--darkish));
+    --gradient-filter: linear-gradient(135deg, var(--darkest), var(--dark));
+    --gradient-heading: linear-gradient(135deg, var(--darkest), var(--normalish));
+    --gradient-footer: linear-gradient(to top, var(--darkish), var(--normalish));
+
+
+    /* BORDERS */
+    --border-01: rgba(255, 255, 255, 0.05);
+    --border-02: rgba(255, 255, 255, 0.15);
 }

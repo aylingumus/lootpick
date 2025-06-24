@@ -2,13 +2,14 @@
     display: flex;
     flex-grow: 1;
     flex-direction: column;
-    border-radius: var(--radius-md);
+
     overflow: hidden;
     position: relative;
 
+    border-radius: var(--radius-md);
     box-shadow: var(--card-shadow);
+    background: var(--gradient-gamecard);
 
-    background: linear-gradient(135deg, rgb(22, 19, 71), rgb(44, 38, 110));
     /* background: rgba(255, 255, 255, 0.05); */
     /* box-shadow: inset 1px 1px 0.12px rgba(255, 255, 255, 0.1),
         1px 1px 3px rgba(0, 0, 0, 0.1); */
@@ -16,7 +17,7 @@
     /* backdrop-filter: blur(10px); */
     /* -webkit-backdrop-filter: blur(10px); */
     /* border: 1px solid rgba(255, 255, 255, 0.1); */
-    background-clip: padding-box;
+    /* background-clip: padding-box; */
 
     /* display: flex;
     flex-grow: 1;
@@ -38,7 +39,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: left;
+    object-position: center;
     display: block;
 }
 
@@ -55,7 +56,7 @@
     width: 2.5em;
     height: 2.5em;
     padding: var(--spacing-xs);
-    color: rgb(191, 86, 45);
+    color: var(--orange);
     transition: transform 0.2s;
 }
 
@@ -64,21 +65,13 @@
 }
 
 .gamecard__text {
-    padding: var(--spacing-sm) var(--spacing-sm);
     display: flex;
     flex-direction: column;
     gap: var(--spacing-xxs);
-    flex-grow: 1;
-    color: white;
+    padding: var(--spacing-sm) var(--spacing-sm);
 }
 
 .gamecard__title {
-    display: -webkit-box;
-    -webkit-line-clamp: 2; /* limit to 2 lines */
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: normal;
 }
 
 .gamecard__date {
@@ -87,13 +80,12 @@
 .gamecard__description {
     flex-grow: 1;
     display: -webkit-box;
-    -webkit-line-clamp: 3; /* limit to 3 lines */
+    -webkit-line-clamp: 2; /* limit to 2 lines */
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: normal;
     color: rgba(255, 255, 255, 0.5);
-    font-weight: 300;
 }
 
 .gamecard__info {
@@ -106,15 +98,22 @@
 }
 
 .gamecard__price {
-    background: rgb(191, 86, 45);
+    background: var(--orange);
     color: rgba(255, 255, 255, 0.8);
-    padding: 0.3rem 1rem;
+    padding: var(--spacing-xxs) var(--spacing-sm);
     border-radius: 999px;
 }
 
 .gamecard__rating {
-    background: rgba(166, 89, 230, 0.5);
+    background: var(--purple);
     color: rgba(255, 255, 255, 0.8);
-    padding: 0.3rem 1rem;
+    padding: var(--spacing-xxs) var(--spacing-sm);
     border-radius: 999px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: var(--spacing-xs);
+
 }

@@ -38,7 +38,7 @@ export default function GameCard({
                 <Typography
                     variant="h6"
                     className="gamecard__title"
-                    sx={{ fontSize: "var(--font-size-xl)" }}
+                    sx={{ fontSize: "var(--font-size-lg)" }}
                 >
                     {title}
                 </Typography>
@@ -50,9 +50,9 @@ export default function GameCard({
                     variant="body2"
                     className="gamecard__description"
                     sx={{
-                        fontSize: "0.95rem",
-                        lineHeight: "1.3rem",
-                        minHeight: "2.6rem",
+                        fontSize: "0.85rem",
+                        lineHeight: "1.2rem",
+                        minHeight: "2.4rem",
                     }}
                 >
                     {description}
@@ -61,7 +61,6 @@ export default function GameCard({
                 <Box className="gamecard__info">
                     <Typography
                         sx={{
-                            width: "fit-content",
                             fontSize: "var(--font-size-md)",
                         }}
                         variant="body1"
@@ -70,19 +69,17 @@ export default function GameCard({
                         {price}
                     </Typography>
 
-                    <Typography
-                        variant="body1"
-                        className="gamecard__rating"
-                        sx={{
-                            whiteSpace: "nowrap",
-                            display: "flex",
-                            alignItems: "center",
-                            gap: "5px",
-                            fontSize: "var(--font-size-md)",
-                        }}
-                    >
-                        <FaStar /> {rating}%
-                    </Typography>
+                    <div className="gamecard__rating">
+                        <FaStar />
+                        <Typography
+                            variant="body1"
+                            sx={{
+                                fontSize: "var(--font-size-md)",
+                            }}
+                        >
+                            {rating}%
+                        </Typography>
+                    </div>
                 </Box>
             </Box>
         </Box>

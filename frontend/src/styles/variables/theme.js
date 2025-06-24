@@ -3,7 +3,7 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 const theme = createTheme({
     palette: {
         primary: {
-            main: "rgb(90, 90, 193)", // primary color
+            main: "rgb(85, 37, 130)", // primary color
             light: "rgb(158, 162, 224)", // custom light
             dark: "#3A3A99", // optional
             contrastText: "#fff", // optional
@@ -18,12 +18,8 @@ const theme = createTheme({
     },
 
     typography: {
-        fontSize: 13, // base font size (default is 14)
-        h1: { fontSize: "2rem" }, // override as needed
-        h2: { fontSize: "1.75rem" },
-        h3: { fontSize: "1.5rem" },
-        body1: { fontSize: "0.8rem" },
-        body2: { fontSize: "0.7rem" },
+        fontSize: 12, // base font size (default is 14)
+
     },
 
     spacing: 4,

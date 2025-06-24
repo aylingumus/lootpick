@@ -17,20 +17,9 @@ export default function FilterHeader({
         <>
             <div className="filter__header-container">
                 <div
-                    className="filter__header"
+                    className="filter__header-avatar"
                     style={{
-                        position: "absolute",
-                        bottom: "-1em",
-                        left: "2em",
-                        width: "100%",
-                        height: "30rem",
                         backgroundImage: "url(/images/avatar-a.png)",
-                        backgroundSize: "auto 70%",
-                        backgroundPosition: "left 3em bottom 0",
-                        backgroundRepeat: "no-repeat",
-                        zIndex: 0,
-                        pointerEvents: "none",
-                        backgroundColor: "transparent", // ensures no background behind PNG
                     }}
                 ></div>
                 <div className="filter__header-text-container">
@@ -38,7 +27,7 @@ export default function FilterHeader({
                         className="filter__header-text"
                         variant="h1"
                         sx={{
-                            fontSize: "3rem",
+                            fontSize: "3.5rem",
                         }}
                     >
                         Find Your Next Loot
@@ -47,7 +36,7 @@ export default function FilterHeader({
                         className="filter__header-text"
                         variant="body2"
                         sx={{
-                            fontSize: "1.4rem",
+                            fontSize: "1.3rem",
                             color: "rgba(255, 255, 255, 0.6)",
                         }}
                     >
