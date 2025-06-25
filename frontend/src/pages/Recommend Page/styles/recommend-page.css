@@ -1,7 +1,7 @@
 .recommend {
     min-height: calc(100vh - 4.5em);
     padding: var(--spacing-md);
-    background: var(--accent-regular);
+    background: var(--gradient-background);
     min-height: 100vh;
     display: flex;
     align-items: center;
@@ -13,7 +13,7 @@
     max-width: 100px;
     display: flex;
     flex-direction: column;
-    gap: var(--spacing-xs);
+    gap: var(--spacing-md);
 }
 
 .filter__header {
@@ -32,9 +32,13 @@
 }
 
 .recommend__results {
-    background: var(--lightest-gray);
     padding: var(--spacing-lg);
     border-radius: var(--radius-lg);
+
+    background: var(--gradient-containers);
+    box-shadow: var(--container-shadow);
+    border: var(--container-outline);
+
     display: flex;
     flex: 1; /*This will make it fill the container */
     flex-direction: column;
@@ -58,7 +62,6 @@
 }
 
 .recommend__row1 {
-
 }
 
 .recommend__row2 {

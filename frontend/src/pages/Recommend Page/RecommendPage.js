@@ -1,5 +1,6 @@
 import FooterBasic from "components/FooterBasic";
 import RecommendCard from "pages/Recommend Page/components/RecommendCard";
+import RecommendHeader from "pages/Recommend Page/components/RecommendHeader"
 import Typography from "@mui/material/Typography";
 import { Grid, Box } from "@mui/material";
 
@@ -65,12 +66,9 @@ function RecommendPage() {
         <>
             <div className="recommend">
                 <div className="recommend__container">
-                    <Typography variant="h4" className="recommend__header">
-                        This is Recommend Page header
-                    </Typography>
+                    <RecommendHeader className=""/>
 
-                    <div className="recommend__body"></div>
-                    <div className="recommend__results">
+                    <div className="recommend__results fade-in-3">
                         <div className="recommend__grid">
 
                                 <Box className="recommend__row1">

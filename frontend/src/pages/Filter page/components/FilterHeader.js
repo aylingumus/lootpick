@@ -4,18 +4,10 @@ import "pages/Filter Page/styles/filter-header.css";
 
 import Typography from "@mui/material/Typography";
 
-export default function FilterHeader({
-    image,
-    title,
-    rating,
-    releaseDate,
-    description,
-    price,
-    key,
-}) {
+export default function FilterHeader() {
     return (
         <>
-            <div className="filter__header-container">
+            <div className="filter__header-container fade-in-1">
                 <div
                     className="filter__header-avatar"
                     style={{

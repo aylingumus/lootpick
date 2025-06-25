@@ -9,6 +9,7 @@ import 'styles/variables/radius-variables.css'
 import 'styles/animation/scale-on-interaction.css'
 import 'styles/variables/shadow-variables.css'
 import 'styles/variables/border-variables.css'
+import 'styles/animation/fade-in.css'
 
 import App from './App';
 import reportWebVitals from './reportWebVitals';

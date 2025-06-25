@@ -4,8 +4,8 @@
     flex-direction: column;
     border-radius: var(--radius-md);
     overflow: hidden;
-    background: var(--white);
     box-shadow: var(--card-shadow);
+    background: var(--gradient-gamecard);
 }
 
 .recommendcard__image {

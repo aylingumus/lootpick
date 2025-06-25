@@ -184,12 +184,12 @@ function FilterPage() {
         <>
             <div className="filter">
                 <div className="filter__container">
-                    <FilterHeader />
+                    <FilterHeader className="fade-in-1"/>
 
                     <div className="filter__body">
                         <FilterContainer className="filter__side-panel" />
 
-                        <div className="filter__results">
+                        <div className="filter__results fade-in-3">
                             <Box className="filter__results-header">
                                 <Box className="filter__sorting">
                                     <Typography

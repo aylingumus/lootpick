@@ -27,7 +27,7 @@ export default function GameCard({
     };
 
     return (
-        <Box id={key} className="gamecard__container hover-scale">
+        <Box id={key} className="gamecard__container hover-scale fade-in-4">
             <Box className="gamecard__image">
                 <img src={image} alt={title} className="" />
                 <button className="gamecard__compare" onClick={handleClick}>

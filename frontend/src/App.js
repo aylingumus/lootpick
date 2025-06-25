@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import { MyProvider, MyContext } from "context/CurrentPageContext";
 
 import { ThemeProvider } from "@mui/material/styles";
@@ -41,6 +41,10 @@ function App() {
                 return <NavBar />;
         }
     };
+
+    useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
     return (
         <>

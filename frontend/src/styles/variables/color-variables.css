@@ -55,6 +55,7 @@
     --gradient-filter: linear-gradient(135deg, var(--darkest), var(--dark));
     --gradient-heading: linear-gradient(135deg, var(--darkest), var(--normalish));
     --gradient-footer: linear-gradient(to top, var(--darkish), var(--normalish));
+    --gradient-recommend-header: linear-gradient(135deg, var(--normalish), var(--dark));
 
 
     /* BORDERS */

@@ -61,7 +61,7 @@ export default function FilterContainer() {
     };
 
     return (
-        <Box className="filter-container">
+        <Box className="filter-container fade-in-2">
             <Typography
                 variant="h6"
                 sx={{ fontWeight: "bold", fontSize: "1.4em" }}
