@@ -33,7 +33,7 @@ export default function RecommendHeader() {
                         className="recommend__header-text"
                         variant="h1"
                         sx={{
-                            fontSize: "2.8rem",
+                            fontSize: "2.3rem",
                         }}
                     >
                         Select up to three games
@@ -51,9 +51,9 @@ export default function RecommendHeader() {
                                 onClick={handleClick}
                             >
                                 {isLiked ? (
-                                    <IoIosRemoveCircleOutline size={22} />
-                                ) : (
                                     <IoIosRemoveCircle size={22} />
+                                ) : (
+                                    <IoIosRemoveCircleOutline size={22}  />
                                 )}
                             </button>
                         </div>

@@ -49,7 +49,7 @@
 .recommend__results-header {
     display: flex;
     flex-direction: column;
-
+    
     width: 100%;
 }
 
@@ -57,7 +57,7 @@
     display: flex;
     flex-direction: column;
     gap: var(--spacing-sm);
-    flex-wrap: wrap;
+
     width: 100%;
 }
 
@@ -68,12 +68,12 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    gap: var(--spacing-xs);
+    gap: var(--spacing-sm);
 }
 
 .recommend__row3 {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    gap: var(--spacing-xs);
+    gap: var(--spacing-sm);
 }

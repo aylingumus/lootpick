@@ -23,7 +23,7 @@ function NavBar() {
             <Toolbar className="navbar__toolbar">
                 <Box className="navbar__logo">
                     <LuGamepad2 size={40} />
-                    <Typography variant="h4" className="navbar__title">
+                    <Typography variant="h4" className="navbar__title" sx={{fontSize: "2.2rem"}}>
                         LootPick
                     </Typography>
                 </Box>

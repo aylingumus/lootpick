@@ -6,13 +6,14 @@
     overflow: hidden;
     box-shadow: var(--card-shadow);
     background: var(--gradient-gamecard);
+    position: relative;
+    color: white;
 }
 
 .recommendcard__image {
     width: 100%;
     aspect-ratio: 16 / 9;
     overflow: hidden;
-
 }
 
 .recommendcard__image img {
@@ -23,8 +24,50 @@
     display: block;
 }
 
+.recommendcard__tags {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+}
+
+.recommendcard__rank {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    background-color: var(--purple);
+    border-radius: 999px;
+    color: white;
+    white-space: nowrap;
+}
+
+.recommendcard__genre {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 999px;
+    color: white;
+    white-space: nowrap;
+}
+
+.recommendcard__price {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--orange);
+    border-radius: 999px;
+    color: white;
+    white-space: nowrap;
+
+}
+
 .recommendcard__text {
-    padding: var(--spacing-sm) var(--spacing-sm);
+    padding: var(--spacing-sm) var(--spacing-md) var(--spacing-xs) var(--spacing-md);
     display: flex;
     flex-direction: column;
     gap: var(--spacing-xs);
@@ -44,8 +87,5 @@
 }
 
 .recommendcard__info {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    gap: var(--spacing-xs);
+
 }
