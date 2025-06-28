@@ -55,6 +55,11 @@ function FooterBasic() {
                     </Typography> */}
                     <div className="flex flex-row items-center gap-3">
                         <LuGamepad2 size={42} />
+                        {/* <div className="footer__logo"
+                            style={{
+                                backgroundImage: "url(/images/logo-01.svg)",
+                            }}
+                        ></div> */}
                         <Typography
                             variant="h6"
                             sx={{

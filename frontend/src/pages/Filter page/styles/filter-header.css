@@ -6,7 +6,7 @@
     overflow: visible;
 
     height: 11rem;
-    margin-top: 12rem;
+    margin-top: 8rem;
     width: 100%;
 
     background: var(--gradient-heading);
@@ -22,9 +22,9 @@
 
   position: absolute;
   bottom: 0em;
-  left: 2em;
+  left: 4em;
   width: 100%;
-  height: 30rem;
+  height: 24rem;
 
   background-size: auto 75%;
   background-position: left 3em bottom 0;

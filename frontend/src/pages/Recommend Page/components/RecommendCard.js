@@ -16,6 +16,7 @@ export default function RecommendCard({
     price,
     titleSize,
     genre,
+    subtitle,
 }) {
     return (
         <Box
@@ -58,6 +59,14 @@ export default function RecommendCard({
                     >
                         {title}
                     </Typography>
+
+                    {/* <Typography
+                        variant="h6"
+                        className="recommendcard__title"
+                        sx={{ fontSize: "1.3rem", color: "rgba(255, 255, 255, 0.5)" }}
+                    >
+                        {subtitle}
+                    </Typography> */}
 
                     {/* <Typography
                         variant="body1"

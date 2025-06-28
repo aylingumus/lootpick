@@ -35,7 +35,7 @@
     padding: var(--spacing-lg);
     border-radius: var(--radius-lg);
 
-    background: var(--gradient-containers);
+    background: var(--gradient-recommend-results);
     box-shadow: var(--container-shadow);
     border: var(--container-outline);
 

@@ -36,6 +36,7 @@
     /* MAIN COLORS */
     --darkest: rgb(9, 18, 41);
     --dark: rgb(22, 19, 71);
+    --darkisher: rgb(33, 28, 90);
     --darkish: rgb(44, 38, 110);
     --normal: rgb(74, 70, 149);
     --normalish: rgb(85, 37, 130);
@@ -47,15 +48,20 @@
     --orange: rgb(191, 86, 45);
     --orange-dark: rgb(161, 72, 38);
     --purple: rgba(166, 89, 230, 0.5);
+    
 
     /* GRADIENTS */
-    --gradient-background: linear-gradient(135deg, var(--dark), var(--darkish));
+
+
+    --gradient-background: linear-gradient(135deg, var(--darkisher), var(--darkish));
     --gradient-containers: linear-gradient(135deg, var(--darkest), var(--darkish));
     --gradient-gamecard: linear-gradient(135deg, var(--dark), var(--darkish));
-    --gradient-filter: linear-gradient(135deg, var(--darkest), var(--dark));
+    --gradient-filter: linear-gradient(135deg, var(--darkest), var(--darkish));
     --gradient-heading: linear-gradient(135deg, var(--darkest), var(--normalish));
     --gradient-footer: linear-gradient(to top, var(--darkish), var(--normalish));
-    --gradient-recommend-header: linear-gradient(135deg, var(--normalish), var(--dark));
+    --gradient-recommend-header: linear-gradient(135deg, var(--normalish), var(--darkest));
+    --gradient-recommend-results: linear-gradient(135deg, var(--darkest), var(--darkish));
+
 
 
     /* BORDERS */

@@ -25,7 +25,7 @@ export default function RecommendHeader() {
                 <div
                     className="recommend__header-avatar"
                     style={{
-                        backgroundImage: "url(/images/avatar-b.png)",
+                        backgroundImage: "url(/images/avatar-c.png)",
                     }}
                 ></div>
                 <div className="recommend__header-text-container fade-in-2">
@@ -40,22 +40,34 @@ export default function RecommendHeader() {
                     </Typography>
 
                     <div className="recommend_game-selection">
-                        <div className="recommend__game1">
-                            <img
-                                className="recommend__game1-img"
-                                src="https://upload.wikimedia.org/wikipedia/en/c/c6/The_Legend_of_Zelda_Breath_of_the_Wild.jpg"
-                                alt="video game"
-                            ></img>
-                            <button
-                                className="recommend__game1-img-delete"
-                                onClick={handleClick}
+                        <div>
+                            <div className="recommend__game1">
+                                <img
+                                    className="recommend__game1-img"
+                                    src="https://upload.wikimedia.org/wikipedia/en/c/c6/The_Legend_of_Zelda_Breath_of_the_Wild.jpg"
+                                    alt="video game"
+                                ></img>
+                                <button
+                                    className="recommend__game1-img-delete"
+                                    onClick={handleClick}
+                                >
+                                    {isLiked ? (
+                                        <IoIosRemoveCircle size={22} />
+                                    ) : (
+                                        <IoIosRemoveCircleOutline size={22} />
+                                    )}
+                                </button>
+                            </div>
+                            <div
+                                className="mt-2"
+                                style={{
+                                    fontSize: "0.9rem",
+                                    color: "white"
+                                  
+                                }}
                             >
-                                {isLiked ? (
-                                    <IoIosRemoveCircle size={22} />
-                                ) : (
-                                    <IoIosRemoveCircleOutline size={22}  />
-                                )}
-                            </button>
+                                The Legend of Zelda
+                            </div>
                         </div>
 
                         <button className="recommend__add-button hover-scale">

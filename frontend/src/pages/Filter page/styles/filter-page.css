@@ -48,6 +48,13 @@
     width: 100%;
 }
 
+.filter__compare {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: var(--spacing-sm);
+}
+
 .filter__sorting {
     display: flex;
     flex-direction: row;

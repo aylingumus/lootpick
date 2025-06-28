@@ -11,7 +11,7 @@ export default function FilterHeader() {
                 <div
                     className="filter__header-avatar"
                     style={{
-                        backgroundImage: "url(/images/avatar-a.png)",
+                        backgroundImage: "url(/images/avatar-d.png)",
                     }}
                 ></div>
                 <div className="filter__header-text-container">

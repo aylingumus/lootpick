@@ -5,7 +5,6 @@
     overflow: visible;
     position: relative;
     height: auto;
-    margin-top: 8rem;
     width: 100%;
 
     background: var(--gradient-recommend-header);
@@ -20,13 +19,15 @@
     position: absolute;
     bottom: 0em;
     width: 100%;
-    height: 30rem;
+    height: 20rem;
 
     background-size: auto 95%;
-    background-position: right 4em bottom 0;
+    background-position: left 8em bottom 0;
     background-repeat: no-repeat;
     z-index: 0;
     background-color: transparent;
+    transform: scaleX(-1);
+
 }
 
 .recommend__header-text-container {
@@ -36,6 +37,7 @@
     align-items: center;
     gap: var(--spacing-md);
     width: fit-content;
+    padding-left: var(--spacing-xl)
 }
 
 .recommend__header-text {
@@ -46,13 +48,13 @@
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    align-items: center;
-    gap: var(--spacing-md);
+    align-items: top;
+    gap: var(--spacing-lg);
 }
 
 .recommend__game1 {
-    height: 14em;
-    width: 10em;
+    height: 12em;
+    width: 8em;
     border-radius: var(--spacing-md);
     overflow: hidden;
     border: 3px solid var(--purple);
@@ -95,8 +97,8 @@
     border-style: dashed;
 
     border-radius: var(--spacing-md);
-    height: 14em;
-    width: 10em;
+    height: 12em;
+    width: 8em;
     display: flex;
     justify-content: center;
     align-items: center;

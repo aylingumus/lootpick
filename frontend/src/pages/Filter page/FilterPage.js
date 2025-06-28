@@ -169,22 +169,13 @@ function FilterPage() {
                 "Competitive MOBA with deep strategy and high skill ceiling.",
             price: "Free",
         },
-        {
-            image: "https://assets.xboxservices.com/assets/4e/bc/4ebcb533-e184-42f3-833b-9aa47a81f39e.jpg?n=153142244433_Poster-Image-1084_1920x720.jpg",
-            title: "Valorant",
-            rating: 89,
-            releaseDate: "Jun 2, 2020",
-            description:
-                "Tactical FPS combining precise gunplay with unique agents.",
-            price: "Free",
-        },
     ];
 
     return (
         <>
             <div className="filter">
                 <div className="filter__container">
-                    <FilterHeader className="fade-in-1"/>
+                    <FilterHeader className="fade-in-1" />
 
                     <div className="filter__body">
                         <FilterContainer className="filter__side-panel" />
@@ -202,20 +193,33 @@ function FilterPage() {
                                     <SortingDropdown />
                                 </Box>
 
-                                {/* <Box className="filter__compare">
+                                <Box className="filter__compare">
                                     <Typography
                                         className="filter__compare-text"
                                         variant="subtitle1"
+                                        sx={{ fontSize: "1rem" }}
                                     >
-                                        Select and compare
+                                        Selected: 0 of 3 games
                                     </Typography>
                                     <Button
                                         className="filter__compare-button"
                                         variant="contained"
+                                        sx={{
+                                            fontSize: "1rem",
+                                            backgroundColor: "var(--orange)", // orange fill
+
+                                            borderColor: "var(--orange)", // optional: make border match
+                                            "&:hover": {
+                                                backgroundColor:
+                                                    "var(--orange-dark)", // darker orange on hover
+                                                borderColor:
+                                                    "var(--orange-dark)",
+                                            },
+                                        }}
                                     >
-                                        Compare
+                                        Recommend
                                     </Button>
-                                </Box> */}
+                                </Box>
                             </Box>
 
                             <div className="filter__grid">
