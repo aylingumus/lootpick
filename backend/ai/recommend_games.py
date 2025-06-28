@@ -59,5 +59,5 @@ def main(
 
 # If this script is run directly, call main()
 if __name__ == "__main__":
-    main(csv_path='data/first_200_rows.csv', target_name='RimWorld')
+    main(csv_path='data/first_10000_rows.csv', target_name='The Sims™ 4')
 
