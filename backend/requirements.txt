@@ -1,4 +1,5 @@
 fastapi
+matplotlib
 openai
 pandas
 scikit-learn

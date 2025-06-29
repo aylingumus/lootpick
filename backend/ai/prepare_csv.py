@@ -38,8 +38,8 @@ def prepare_and_embed(
 if __name__ == "__main__":
     prepare_and_embed(
         raw_csv="data/games_march2025_cleaned.csv",
-        subset_csv="data/first_200_rows.csv",
-        subset_size=200,
+        subset_csv="data/first_10000_rows.csv",
+        subset_size=10000,
         text_max_chars=20000,
         batch_size=50,
         sleep_time=0.1
