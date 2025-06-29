@@ -1,0 +1,49 @@
+.filter__header-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    overflow: visible;
+
+    height: 11rem;
+    margin-top: 8rem;
+    width: 100%;
+
+    background: var(--gradient-heading);
+    padding: var(--spacing-sm);
+    border-radius: var(--radius-lg);
+
+    box-shadow: var(--container-shadow);
+    border: var(--container-outline);
+}
+
+
+.filter__header-avatar {
+
+  position: absolute;
+  bottom: 0em;
+  left: 4em;
+  width: 100%;
+  height: 24rem;
+
+  background-size: auto 75%;
+  background-position: left 3em bottom 0;
+  background-repeat: no-repeat;
+  z-index: 0;
+  background-color: transparent; 
+
+}
+
+
+.filter__header-text-container {
+    position: absolute;
+    top: 50%;
+    left: 63%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+    color: white;
+}
+
+.filter__header-text {
+}

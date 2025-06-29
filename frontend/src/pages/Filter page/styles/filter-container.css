@@ -1,0 +1,23 @@
+.filter-container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+    padding: var(--spacing-lg);
+    min-width: 300px;
+    max-width: 400px;
+    background: var(--gradient-filter);
+
+    border: var(--container-outline);
+    box-shadow: var(--container-shadow);
+    border-radius: var(--radius-lg);
+}
+
+.filter__genres {
+    display: flex;
+    flex-direction: column;
+}
+
+.filter__platform {
+    display: flex;
+    flex-direction: column;
+}

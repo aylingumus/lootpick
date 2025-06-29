@@ -1,0 +1,89 @@
+.filter {
+    padding: var(--spacing-md);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--gradient-background);
+    background-size: 400% 400%;
+    animation: gradient 45s ease infinite;
+    color: white;
+}
+
+.filter__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--spacing-md);
+
+    min-width: 1000px;
+    max-width: 1300px;
+}
+
+.filter__body {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-md);
+}
+
+.filter__results {
+    display: flex;
+    flex: 1; /*This will make it fill the container */
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-lg);
+
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-lg);
+    background: var(--gradient-containers);
+    box-shadow: var(--container-shadow);
+    border: var(--container-outline);
+}
+
+.filter__results-header {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.filter__compare {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: var(--spacing-sm);
+}
+
+.filter__sorting {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.filter__sorting-dropdown {
+
+}
+
+/* .filter__compare {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: var(--spacing-sm);
+    justify-content: flex-end;
+    align-items: center;
+} */
+
+.filter__grid {
+    display: grid;
+    flex-wrap: wrap;
+    align-content: start;
+    gap: var(--spacing-md);
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.filter__load-button {
+
+}

@@ -1,0 +1,6 @@
+:root {
+    --card-shadow: 0 0 0.75em rgba(0, 0, 0, 0.3);
+    --container-shadow: 0 0 2em rgba(0, 0, 0, 0.3);
+    --container-glow:  0 0 15px var(--purple), 
+              0 0 30px var(--purple); 
+}
