@@ -1,0 +1,119 @@
+.gamecard__container {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+
+    overflow: hidden;
+    position: relative;
+
+    border-radius: var(--radius-md);
+    box-shadow: var(--card-shadow);
+    background: var(--gradient-gamecard);
+
+    /* background: rgba(255, 255, 255, 0.05); */
+    /* box-shadow: inset 1px 1px 0.12px rgba(255, 255, 255, 0.1),
+        1px 1px 3px rgba(0, 0, 0, 0.1); */
+    /* box-shadow: 0px 0px 5px rgba(51, 78, 190, 0.5); */
+    /* backdrop-filter: blur(10px); */
+    /* -webkit-backdrop-filter: blur(10px); */
+    /* border: 1px solid rgba(255, 255, 255, 0.1); */
+    /* background-clip: padding-box; */
+
+    /* display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    background: var(--white);
+    position: relative;
+    box-shadow: var(--card-shadow); */
+}
+
+.gamecard__image {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+}
+
+.gamecard__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+.gamecard__compare {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    width: 2.5em;
+    height: 2.5em;
+    padding: var(--spacing-xs);
+    color: var(--orange);
+    transition: transform 0.2s;
+}
+
+.gamecard__compare:active {
+    transform: scale(1.2);
+}
+
+.gamecard__text {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xxs);
+    padding: var(--spacing-sm) var(--spacing-sm);
+}
+
+.gamecard__title {
+}
+
+.gamecard__date {
+}
+
+.gamecard__description {
+    flex-grow: 1;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* limit to 2 lines */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.gamecard__info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--spacing-xs);
+    padding-top: var(--spacing-xs);
+}
+
+.gamecard__price {
+    background: var(--orange);
+    color: rgba(255, 255, 255, 0.8);
+    padding: var(--spacing-xxs) var(--spacing-sm);
+    border-radius: 999px;
+}
+
+.gamecard__rating {
+    background: var(--purple);
+    color: rgba(255, 255, 255, 0.8);
+    padding: var(--spacing-xxs) var(--spacing-sm);
+    border-radius: 999px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: var(--spacing-xs);
+
+}

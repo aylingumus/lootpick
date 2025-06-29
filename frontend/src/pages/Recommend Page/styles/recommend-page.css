@@ -1,0 +1,79 @@
+.recommend {
+    min-height: calc(100vh - 4.5em);
+    padding: var(--spacing-md);
+    background: var(--gradient-background);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.recommend__container {
+    min-width: 1000px;
+    max-width: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.filter__header {
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: var(--spacing-sm);
+    background: var(--accent-light);
+    padding: var(--spacing-sm);
+    border-radius: var(--radius-lg);
+}
+
+.recommend__body {
+    display: flex;
+    gap: var(--spacing-md);
+    align-items: flex-start;
+}
+
+.recommend__results {
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-lg);
+
+    background: var(--gradient-recommend-results);
+    box-shadow: var(--container-shadow);
+    border: var(--container-outline);
+
+    display: flex;
+    flex: 1; /*This will make it fill the container */
+    flex-direction: column;
+    gap: var(--spacing-md);
+    align-items: center;
+}
+
+.recommend__results-header {
+    display: flex;
+    flex-direction: column;
+    
+    width: 100%;
+}
+
+.recommend__grid {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+
+    width: 100%;
+}
+
+.recommend__row1 {
+}
+
+.recommend__row2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: var(--spacing-sm);
+}
+
+.recommend__row3 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: var(--spacing-sm);
+}

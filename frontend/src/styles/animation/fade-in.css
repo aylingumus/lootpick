@@ -1,0 +1,34 @@
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fade-in-1 {
+    animation: fadeIn 0.4s ease-in;
+}
+
+.fade-in-2 {
+    opacity: 0;
+    animation: fadeIn 0.4s ease-in;
+    animation-delay: 0.4s;
+    animation-fill-mode: forwards;
+}
+
+.fade-in-3 {
+    opacity: 0;
+    animation: fadeIn 0.4s ease-in;
+    animation-delay: 0.8s;
+    animation-fill-mode: forwards;
+}
+
+.fade-in-4 {
+    opacity: 0;
+    animation: fadeIn 0.4s ease-in;
+    animation-delay: 1.2s;
+    animation-fill-mode: forwards;
+}
