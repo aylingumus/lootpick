@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 
 # --- Config ---
 csv_path = "data/first_10000_rows.csv"
-target_name = "The Sims™ 4"
+target_name = "The Elder Scrolls V: Skyrim"
 top_k = 5
 sample_size = 500
 
