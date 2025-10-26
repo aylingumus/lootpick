@@ -1,70 +1,147 @@
-# Getting Started with Create React App
+# 🎮 LootPick (Front-End)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![JavaScript](https://img.shields.io/badge/-JavaScript-F7DF1E?logo=javascript&logoColor=black&logoWidth=30)
+![HTML5](https://img.shields.io/badge/-HTML5-E34F26?logo=html5&logoColor=white&logoWidth=30)
+![CSS3](https://img.shields.io/badge/-CSS3-1572B6?logo=css3&logoColor=white&logoWidth=30)
+![React](https://img.shields.io/badge/-React-61DAFB?logo=react&logoColor=black&logoWidth=30)
+![Create React App](https://img.shields.io/badge/-Create%20React%20App-09D3AC?logo=create-react-app&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/-Tailwind%20CSS-06B6D4?logo=tailwindcss&logoColor=white&logoWidth=30)
+![Lucide Icons](https://img.shields.io/badge/-Lucide%20React-61DAFB?logo=lucide&logoColor=black&logoWidth=30)
+![React Icons](https://img.shields.io/badge/-React%20Icons-61DAFB?logo=react&logoColor=black&logoWidth=30)
+![rc-slider](https://img.shields.io/badge/-rc--slider-000000)
+![Prettier](https://img.shields.io/badge/-Prettier-F7B93E?logo=prettier&logoColor=black&logoWidth=30)
+![Netlify](https://img.shields.io/badge/-Netlify-00C7B7?logo=netlify&logoColor=white&logoWidth=30)
+[![TechLabs](https://img.shields.io/badge/->.%20TechLabs-FF007F?)](https://www.techlabs.org/location/rotterdam)
 
-## Available Scripts
+LootPick is a smart discovery website that uses AI to match you with your next favorite video game. It’s your personal gaming companion, allowing you to filter, sort, and explore new and existing titles effortlessly. This project was built over 8 weekends
+during [**TechLabs**](https://www.techlabs.org/location/rotterdam) learning
+program.
 
-In the project directory, you can run:
+🚀 [**Front-End Live Demo**](https://lootpick-app.netlify.app/)
 
-### `npm start`
+<br>
+<p align="center">
+  <img src="./screenshots/panel-01-120r.png" alt="LootPick homepage" style="width:70%" />
+</p>
+<p align="center"><em>LootPick — A game discovery and sorting site</em></p>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## ✨ Features
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Personalized recommendations powered by AI
+- Advanced game discovery with filtering, search, and comparison tools
+- Save to wishlist, buy, or explore later
+- Interactive UI with sliders and filters
+- Modern dark mode colors
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<br>
+<p align="center">
+  <img src="./screenshots/panel-02-120r.png" alt="LootPick homepage" style="width:70%" />
+</p>
+<p align="center"><em>Get game recommendations based on your favorite titles</em></p>
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🔍 Challenges & My Approach
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+| **Challenge**                             | **Approach**                                                                                                                                                |
+| ----------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Managing scope creep from ambitious ideas | Defined a clear MVP and organized tasks with Trello.                                                                                                        |
+| Designing UI from scratch                 | Researched references and created wireframes in [Figma](https://www.figma.com/design/yK1ZpChLzhRBbyoyQu93vB/LootPick-App?node-id=0-1&t=lY4PwSllHDq0UtIA-1). |
+| Building a web app under time pressure    | Selected React for its component-based architecture and mature ecosystem.                                                                                   |
+| Rapid prototyping of components            | Used v0 and Replit to quickly generate basic layouts.                                                                                                        |
+| Styling consistent UI components          | Used a Tailwind-only approach for the app’s appearance and styling.                                                                                                     |
+| Creating flexible range-based filters     | Integrated rc-slider for customizable range sliders.                                                                                                        |
+| Maintaining consistent code style         | Used Prettier for automated formatting.                                                                                                                     |
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+<br>
+<p align="center">
+  <img src="./screenshots/panel-04-80r.png" alt="LootPick homepage" style="width:70%" />
+</p>
+<p align="center"><em>Figma Low-fidelity wireframes</em></p>
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 🗂️ App Structure
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+<details>
+  <summary>Expand front-end
+   directory</summary>
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```bash
+src/
+├── App.js                # Root React component and routing
+├── assets/               # Static files (images, logos, etc.)
+├── components/           # Reusable UI components
+├── context/              # React context providers
+├── data/                 # Temporary mock data used before API integration
+├── pages/                # Page components
+│   ├── Compare Page/     # Game comparison features
+│   ├── Filter Page/      # Game filtering and search
+│   ├── Recommend Page/   # Game recommendations
+│   └── Wishlist Page/    # User's wishlist management
+└── styles/               # Global styles and theming
+```
 
-## Learn More
+</details>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 👥 Team
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- 🧑 [Reinis Pakulis](https://nl.linkedin.com/in/reinis-pakulis) – UX/UI
+  designer, Front-End Developer _(I’m here!)_
+- 👩‍💻 Aylin Gümüş – Data Science, Back-End Developer
+- 👨‍💻 Johannes Fourie – AI, Machine Learning
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+<br>
+<p align="center">
+  <img src="./screenshots/panel-06-40r.png" alt="LootPick homepage" style="width:70%" />
+</p>
+<p align="center"><em>Project planning and task management using Trello.</em></p>
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## 🚀 Future Work
 
-### Making a Progressive Web App
+- Expand to tablet/mobile layouts
+- Develop a wishlist feature so users can bookmark gamess
+- Introduce a comparison page for side-by-side evaluation
+- Integrate backend APIs for live data and AI recommendations
+- Add an AI buddy to guide users and assist with game discovery
+- Add user accounts to save preferences
+- Improve animations, transitions & routing
+- Optimize image loading & performance
+- Develop cross-platform mobile versions
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
+<br>
+<p align="center">
+  <img src="./screenshots/panel-03-120r.png" alt="LootPick homepage" style="width:70%" />
+</p>
+<p align="center">
+  <img src="./screenshots/panel-05.png" alt="LootPick homepage" style="width:100%" />
+</p>
+<p align="center"><em>Multi-device expansion and AI buddy development</em></p>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
+## ⚙️ Running Locally
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+<details> <summary>Instructions</summary>
+This project was bootstrapped with Create React App. To run this project locally:
+<br><br>
 
-### `npm run build` fails to minify
+```
+git clone https://github.com/aylingumus/lootpick.git
+cd lootpick
+npm install
+npm start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Open http://localhost:3000 in your browser.
+
+_Currently uses static data; Back-End integration planned._
+
+</details>
+
+## 📄 License
+
+This project is for educational purposes. Feel free to fork and experiment with
+it!
