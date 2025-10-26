@@ -1,12 +1,10 @@
 import FooterBasic from "components/FooterBasic";
 
-import "pages/Wishlist Page/styles/wishlist-page.css";
-
 function WishlistPage() {
   return (
     <>
-      <div className="wishlist">
-        <div className="wishlist__container">This is Wishlist Page</div>
+      <div className="flex flex-col h-screen">
+        <div className="flex flex-1 items-center justify-center">This is Wishlist Page</div>
         <FooterBasic />
       </div>
     </>

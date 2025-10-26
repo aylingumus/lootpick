@@ -1,62 +1,35 @@
 import React, { useState } from "react";
-import "pages/Filter Page/styles/filter-container.css";
-import {
-    Button,
-    Box,
-    FormControl,
-    InputLabel,
-    Select,
-    MenuItem,
-} from "@mui/material";
 
-export default function FilterContainer() {
+export default function SortingDropdown() {
     const [value, setValue] = useState("popular");
 
     const handleChange = (event) => {
         setValue(event.target.value);
     };
-    return (
-        <FormControl size="small">
-            <Select
-                id="dropdown"
-                value={value}
-                onChange={handleChange}
-                sx={{
-                    color: "white",
-                    width: "220px",
-                    backgroundColor: "rgba(255, 255, 255, 0.1)",
-                    ".MuiSelect-icon": {
-                        color: "white",
-                    },
-                    "& .MuiOutlinedInput-notchedOutline": {
-                        borderColor: "white",
-                    },
-                    "&:hover .MuiOutlinedInput-notchedOutline": {
-                        borderColor: "white",
-                    },
-                    "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
-                        borderColor: "white",
-                    },
-                }}
-                MenuProps={{
-                    PaperProps: {
-                        sx: {
-                            backgroundColor: "var(--dark)",
-                            color: "white",
-                        },
-                    },
-                }}
-            >
-                <MenuItem value="name-asc">Name (A–Z)</MenuItem>
-                <MenuItem value="name-desc">Name (Z–A)</MenuItem>
-                <MenuItem value="price-asc">Price (Low to High)</MenuItem>
-                <MenuItem value="price-desc">Price (High to Low)</MenuItem>
-                <MenuItem value="release-desc">Release Date (Newest)</MenuItem>
-                <MenuItem value="release-asc">Release Date (Oldest)</MenuItem>
-                <MenuItem value="rating-desc">Rating (High to Low)</MenuItem>
-                <MenuItem value="popular">Most Popular</MenuItem>
-                <MenuItem value="discount">Biggest Discount</MenuItem>
-            </Select>
-        </FormControl>
-    );
+    
+ return (
+  <select
+    value={value}
+    onChange={handleChange}
+    className="
+      w-56 px-3 py-2
+      text-sm text-white
+      bg-white/10 border border-white/20 rounded-md
+      focus:outline-none focus:border-white/40
+      cursor-pointer
+    "
+  >
+    <option value="name-asc" className="bg-lp-dark text-lp-light">Name (A–Z)</option>
+    <option value="name-desc" className="bg-lp-dark text-lp-light">Name (Z–A)</option>
+    <option value="price-asc" className="bg-lp-dark text-lp-light">Price (Low to High)</option>
+    <option value="price-desc" className="bg-lp-dark text-lp-light">Price (High to Low)</option>
+    <option value="release-desc" className="bg-lp-dark text-lp-light">Release Date (Newest)</option>
+    <option value="release-asc" className="bg-lp-dark text-lp-light">Release Date (Oldest)</option>
+    <option value="rating-desc" className="bg-lp-dark text-lp-light">Rating (High to Low)</option>
+    <option value="popular" className="bg-lp-dark text-lp-light">Most Popular</option>
+    <option value="discount" className="bg-lp-dark text-lp-light">Biggest Discount</option>
+  </select>
+);
+
+
 }

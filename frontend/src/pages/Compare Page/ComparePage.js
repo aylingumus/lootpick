@@ -1,12 +1,10 @@
 import FooterBasic from "components/FooterBasic";
 
-import "pages/Compare Page/styles/compare-page.css";
-
 function ComparePage() {
   return (
     <>
-      <div className="compare">
-        <div className="compare__container">This is Compare Page</div>
+      <div className="flex flex-col h-screen">
+        <div className="flex flex-1 items-center justify-center">This is Compare Page</div>
         <FooterBasic />
       </div>
     </>
